@@ -9,9 +9,9 @@ const jwt_secret = process.env.JWT_SECRET;
 
 
 // Rotas públicas
-exports.renderHome = (req, res) => {
-  res.render('home.html');
-};
+// exports.renderHome = (req, res) => {
+//   res.render('home.html');
+// };
 exports.renderPage = (req, res) => {
   res.render('Page.html');
 };
@@ -88,7 +88,8 @@ exports.login = async (req, res) => {
       return res.status(400).render('login', { error: 'Senha inválida' });
     }
 
-    
+    req.session.user = user; 
+
     const token = jwt.sign({ id: user.id }, jwt_secret, { expiresIn: "1d" });
 
     console.log('Login bem-sucedido:', user);
