@@ -87,34 +87,30 @@
       background: #f0f0f0;
     }
 
-    .features {
+    .auth-section {
+      margin-top: 50px;
       display: flex;
-      justify-content: space-around;
-      margin-top: 80px;
-      width: 100%;
-      max-width: 1200px;
+      gap: 20px;
     }
 
-    .feature {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      padding: 20px;
-      border-radius: 12px;
-      width: 30%;
-    }
-
-    .feature h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .feature p {
+    .auth-btn {
+      background: #fff;
+      color: #333;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 40px;
       font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .auth-btn:hover {
+      background: #f0f0f0;
     }
 
     footer {
-      margin-top: 295px;
+      margin-top: 499px;
       padding: 20px;
       background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(10px);
@@ -130,12 +126,12 @@
 <body>
   <!-- Navbar -->
   <nav class="navbar">
-    <a href="/page" class="logo">MyWebsite</a>
+    <a href="#" class="logo">MyWebsite</a>
     <div class="nav-links">
+      <a href="/page">Home</a>
       <a href="#">About</a>
       <a href="#">Services</a>
       <a href="#">Contact</a>
-      <a href="/register">Login</a>
     </div>
   </nav>
 
@@ -143,22 +139,9 @@
   <section class="hero">
     <h1>Welcome to MyWebsite</h1>
     <p>Discover amazing features and services tailored just for you. Join us today and take your experience to the next level!</p>
-    <button class="btn">Get Started</button>
-  </section>
-
-  <!-- Features Section -->
-  <section class="features">
-    <div class="feature">
-      <h2>Feature One</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
-    </div>
-    <div class="feature">
-      <h2>Feature Two</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
-    </div>
-    <div class="feature">
-      <h2>Feature Three</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque aliquam odio et faucibus.</p>
+    <div class="auth-section">
+        <button type="submit" class="btn" onclick="window.location.href='/login'">Login</button>
+        <button type="submit" class="btn" onclick="window.location.href='/register'">Register</button>
     </div>
   </section>
 

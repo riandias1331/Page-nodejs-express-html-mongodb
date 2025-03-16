@@ -9,9 +9,9 @@ const jwt_secret = process.env.JWT_SECRET;
 
 
 // Rotas públicas
-// exports.renderHome = (req, res) => {
-//   res.render('home.html');
-// };
+exports.renderHome = (req, res) => {
+  res.render('home.html');
+};
 exports.renderPage = (req, res) => {
   res.render('Page.html');
 };
@@ -95,7 +95,7 @@ exports.login = async (req, res) => {
     console.log('Login bem-sucedido:', user);
     console.log('Token:', token);
     // Renderizar a página 'Page' após o login bem-sucedido
-    res.redirect('/Page');
+    res.redirect('/page');
   } catch (error) {
     res.status(500).json({ message: error.message });
   }

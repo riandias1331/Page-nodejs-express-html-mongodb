@@ -11,10 +11,11 @@ router.delete("/users", auth, Controller.deletedUserAll);
 
 
 // Public routes
-router.get("/", loginRequired, Controller.renderPage);
-router.get("/login", loginRequired, Controller.getlogin);
-router.get("/register", loginRequired, Controller.getregister);
-router.post("/register", loginRequired, Controller.register); 
-router.post("/login", loginRequired, Controller.login);
+router.get("/", loginRequired, Controller.renderHome);
+router.get("/page", loginRequired, Controller.renderPage);
+router.get("/login", Controller.getlogin);
+router.get("/register",  Controller.getregister);
+router.post("/register", Controller.register); 
+router.post("/login",  Controller.login);
 
 module.exports = router;
